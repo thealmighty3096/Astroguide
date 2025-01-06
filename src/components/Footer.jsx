@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="bg-[#1a1a1a] text-white py-12 md:py-16">
       <Container>
-        <div className="flex flex-col md:grid md:grid-cols-4 gap-8 md:gap-12 px-4 md:px-0">
+        <div className="flex flex-col gap-8 px-4 md:px-0">
           {/* About Column */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold mb-4">AstroGuide</h3>
@@ -26,7 +26,7 @@ function Footer() {
           </div>
 
           {/* Quick Links and Services in a grid on mobile */}
-          <div className="grid grid-cols-2 gap-8 md:gap-12 md:col-span-2">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-6 md:gap-12">
             {/* Quick Links */}
             <div>
               <h4 className="font-semibold mb-3 text-sm md:text-base">Quick Links</h4>
@@ -62,7 +62,14 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm px-4 md:px-0">
+        {/* Desktop Layout */}
+        <div className="hidden md:grid md:grid-cols-4 md:gap-12 mt-0">
+          <div></div> {/* About space */}
+          <div className="col-span-2"></div> {/* Links space */}
+          <div></div> {/* Contact space */}
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
           <p>© 2024 AstroGuide. All rights reserved.</p>
         </div>
       </Container>

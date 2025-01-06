@@ -122,14 +122,13 @@ function ConsultationForm() {
                 </label>
                 <input
                   name="dob"
-                  type="date"
+                  type="text"
                   placeholder="DD/MM/YYYY"
-                  pattern="\d{2}/\d{2}/\d{4}"
                   onFocus={(e) => e.target.type = 'date'}
                   onBlur={(e) => {
                     if (!e.target.value) e.target.type = 'text'
                   }}
-                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base appearance-none bg-white"
+                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base appearance-none bg-white text-gray-500"
                 />
               </div>
               <div>
@@ -138,14 +137,13 @@ function ConsultationForm() {
                 </label>
                 <input
                   name="birthTime"
-                  type="time"
-                  placeholder="HH:MM"
-                  pattern="[0-9]{2}:[0-9]{2}"
+                  type="text"
+                  placeholder="HH:MM (24-hour format)"
                   onFocus={(e) => e.target.type = 'time'}
                   onBlur={(e) => {
                     if (!e.target.value) e.target.type = 'text'
                   }}
-                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base appearance-none bg-white"
+                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base appearance-none bg-white text-gray-500"
                 />
               </div>
             </div>
