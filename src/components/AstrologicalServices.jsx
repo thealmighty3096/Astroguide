@@ -37,20 +37,20 @@ const services = [
 
 function AstrologicalServices() {
   return (
-    <section id="about" className="bg-[#1a1a1a] text-white">
+    <section id="about" className="bg-[#1a1a1a] text-white py-12 md:py-20">
       <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-3">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">
             Our Astrological Services
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-400 text-base md:text-lg px-4 md:px-0">
             Expert guidance for every aspect of your life
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12 px-4 md:px-0">
           {services.map((service, index) => (
-            <div key={index} className="bg-[#2a2a2a] rounded-2xl p-6">
+            <div key={index} className="bg-[#2a2a2a] rounded-xl md:rounded-2xl p-4 md:p-6">
               <div className="bg-purple-900/30 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                 <span className="text-2xl">{service.icon}</span>
               </div>

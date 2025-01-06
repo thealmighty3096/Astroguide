@@ -47,7 +47,7 @@ function Hero() {
   };
 
   return (
-    <div className="pt-16 h-[85vh]">
+    <div className="pt-16 pb-8 min-h-screen md:h-[85vh]">
       {/* Audio Control Button - Fixed Position */}
       <button
         onClick={toggleAudio}
@@ -66,9 +66,9 @@ function Hero() {
       </button>
 
       <Container>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center md:text-left">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">
               Discover Your Path Through{' '}
               <span className="text-purple-500">Personal Astrology</span>
             </h1>
@@ -172,8 +172,8 @@ function Hero() {
           </div>
 
           {/* Astrologer Image */}
-          <div className="relative mt-8 md:mt-0">
-            <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-2xl overflow-hidden">
+          <div className="relative mt-6 md:mt-0">
+            <div className="relative w-[280px] h-[280px] md:w-[450px] md:h-[450px] rounded-2xl overflow-hidden">
               <img 
                 src="/astrologer.jpg"
                 alt="Expert Astrologer"

@@ -28,22 +28,22 @@ const experts = [
 
 function ExpertAstrologers() {
   return (
-    <section className="bg-[#1a1a1a] text-white py-20">
+    <section className="bg-[#1a1a1a] text-white py-12 md:py-20">
       <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-3">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">
             Our Expert Astrologers
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-400 text-base md:text-lg px-4 md:px-0">
             Meet our team of experienced vedic astrologers
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12 px-4 md:px-0">
           {experts.map((expert, index) => (
-            <div key={index} className="bg-[#2a2a2a] rounded-2xl p-8">
+            <div key={index} className="bg-[#2a2a2a] rounded-xl md:rounded-2xl p-6 md:p-8">
               <div className="flex flex-col items-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-purple-600">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 md:mb-6 border-4 border-purple-600">
                   <img 
                     src={expert.image}
                     alt={expert.name}
