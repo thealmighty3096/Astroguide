@@ -74,53 +74,53 @@ function ConsultationForm() {
   }
 
   return (
-    <div id="book-consultation" className="pt-24 bg-white text-black">
+    <div id="book-consultation" className="pt-16 md:pt-24 bg-white text-black">
       <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-3">
+        <div className="text-center mb-8 md:mb-12 px-4 md:px-0">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">
             Begin Your Astrological Journey
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-base md:text-lg">
             Fill in your details for a personalized consultation
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl p-12">
+        <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl p-6 md:p-12">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Full Name <span className="text-purple-600">*</span>
+                  Full Name <span className="text-purple-500">*</span>
                 </label>
                 <input
                   name="fullName"
                   type="text"
                   placeholder="Enter your full name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Phone Number <span className="text-purple-600">*</span>
+                  Phone Number <span className="text-purple-500">*</span>
                 </label>
                 <input
                   name="phone"
                   type="tel"
                   placeholder="Enter your phone number"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base"
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Date of Birth <span className="text-purple-600">*</span>
+                  Date of Birth <span className="text-purple-500">*</span>
                 </label>
                 <input
                   name="dob"
                   type="date"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base"
                 />
               </div>
               <div>
@@ -130,30 +130,30 @@ function ConsultationForm() {
                 <input
                   name="birthTime"
                   type="time"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base"
                 />
               </div>
             </div>
 
             <div>
               <label className="block text-sm font-medium mb-2">
-                Place of Birth <span className="text-purple-600">*</span>
+                Place of Birth <span className="text-purple-500">*</span>
               </label>
               <input
                 name="birthPlace"
                 type="text"
                 placeholder="City, Country"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base"
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium mb-2">
-                Consultation Type <span className="text-purple-600">*</span>
+                Consultation Type <span className="text-purple-500">*</span>
               </label>
               <select 
                 name="consultationType"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base"
               >
                 <option value="">Select your consultation type</option>
                 <option value="relationship">Relationship Guidance</option>
@@ -170,7 +170,7 @@ function ConsultationForm() {
                 name="questions"
                 rows="4"
                 placeholder="Share your specific questions or concerns..."
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base"
               ></textarea>
             </div>
 
@@ -178,12 +178,11 @@ function ConsultationForm() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className={`px-8 py-4 bg-purple-600 text-white rounded-lg text-lg font-semibold 
-                  hover:bg-purple-700 transition-colors ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                className={`px-6 py-3 md:px-8 md:py-4 bg-purple-600 text-white rounded-lg text-base md:text-lg font-semibold hover:bg-purple-700 transition-colors ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 {isLoading ? 'Submitting...' : 'Submit Consultation Request'}
               </button>
-              <p className="text-gray-500 mt-4 text-sm">
+              <p className="text-gray-500 mt-3 md:mt-4 text-xs md:text-sm px-4 md:px-0">
                 Our team will contact you within 24 hours to confirm your consultation
               </p>
             </div>
