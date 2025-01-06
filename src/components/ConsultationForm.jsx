@@ -122,11 +122,8 @@ function ConsultationForm() {
                 </label>
                 <input
                   name="dob"
-                  type="text"
-                  placeholder="DD/MM/YYYY"
-                  onClick={(e) => e.target.type = 'date'}
-                  onTouchStart={(e) => e.target.type = 'date'}
-                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base appearance-none bg-white text-gray-500"
+                  type="date"
+                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 bg-white text-gray-700 mobile-date-input"
                 />
               </div>
               <div>
@@ -135,11 +132,8 @@ function ConsultationForm() {
                 </label>
                 <input
                   name="birthTime"
-                  type="text"
-                  placeholder="HH:MM (24-hour format)"
-                  onClick={(e) => e.target.type = 'time'}
-                  onTouchStart={(e) => e.target.type = 'time'}
-                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base appearance-none bg-white text-gray-500"
+                  type="time"
+                  className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 bg-white text-gray-700 mobile-time-input"
                 />
               </div>
             </div>
