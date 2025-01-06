@@ -124,10 +124,8 @@ function ConsultationForm() {
                   name="dob"
                   type="text"
                   placeholder="DD/MM/YYYY"
-                  onFocus={(e) => e.target.type = 'date'}
-                  onBlur={(e) => {
-                    if (!e.target.value) e.target.type = 'text'
-                  }}
+                  onClick={(e) => e.target.type = 'date'}
+                  onTouchStart={(e) => e.target.type = 'date'}
                   className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base appearance-none bg-white text-gray-500"
                 />
               </div>
@@ -139,10 +137,8 @@ function ConsultationForm() {
                   name="birthTime"
                   type="text"
                   placeholder="HH:MM (24-hour format)"
-                  onFocus={(e) => e.target.type = 'time'}
-                  onBlur={(e) => {
-                    if (!e.target.value) e.target.type = 'text'
-                  }}
+                  onClick={(e) => e.target.type = 'time'}
+                  onTouchStart={(e) => e.target.type = 'time'}
                   className="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-base appearance-none bg-white text-gray-500"
                 />
               </div>
