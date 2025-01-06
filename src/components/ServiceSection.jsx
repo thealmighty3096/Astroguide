@@ -31,7 +31,7 @@ const steps = [
 
 function ServiceSection() {
   return (
-    <div className="bg-white text-black">
+    <section id="services" className="bg-white text-black">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-3">
@@ -75,7 +75,7 @@ function ServiceSection() {
           </button>
         </div>
       </Container>
-    </div>
+    </section>
   )
 }
 

@@ -1,3 +1,4 @@
+import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ServiceSection from './components/ServiceSection'
@@ -9,7 +10,7 @@ import FAQ from './components/FAQ'
 
 function App() {
   return (
-    <div className="bg-[#1a1a1a] min-h-screen text-white">
+    <main className="bg-[#1a1a1a] min-h-screen text-white">
       <Navbar />
       <Hero />
       <ServiceSection />
@@ -18,7 +19,7 @@ function App() {
       <ExpertAstrologers />
       <Testimonials />
       <FAQ />
-    </div>
+    </main>
   )
 }
 

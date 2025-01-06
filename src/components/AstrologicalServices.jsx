@@ -37,7 +37,7 @@ const services = [
 
 function AstrologicalServices() {
   return (
-    <div className="bg-[#1a1a1a] text-white">
+    <section id="about" className="bg-[#1a1a1a] text-white">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-3">
@@ -79,7 +79,7 @@ function AstrologicalServices() {
           </button>
         </div>
       </Container>
-    </div>
+    </section>
   )
 }
 
