@@ -1,5 +1,5 @@
 export const scrollToForm = () => {
-  document.getElementById('consultation-form')?.scrollIntoView({
+  document.getElementById('book-consultation')?.scrollIntoView({
     behavior: 'smooth',
     block: 'start'
   });

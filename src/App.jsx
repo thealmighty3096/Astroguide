@@ -10,7 +10,7 @@ import FAQ from './components/FAQ'
 
 function App() {
   return (
-    <main className="bg-[#1a1a1a] min-h-screen text-white">
+    <div className="bg-[#1a1a1a] text-white overflow-x-hidden">
       <Navbar />
       <Hero />
       <ServiceSection />
@@ -19,7 +19,7 @@ function App() {
       <ExpertAstrologers />
       <Testimonials />
       <FAQ />
-    </main>
+    </div>
   )
 }
 

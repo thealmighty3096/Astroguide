@@ -5,9 +5,9 @@ function Footer() {
   return (
     <footer className="bg-[#1a1a1a] text-white py-12 md:py-16">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 px-4 md:px-0">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 md:gap-12 px-4 md:px-0">
           {/* About Column */}
-          <div className="space-y-4">
+          <div className="space-y-4 col-span-2 md:col-span-1">
             <h3 className="text-xl font-bold mb-4">AstroGuide</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Personalized astrological guidance for life's important decisions.
@@ -27,8 +27,8 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="font-semibold mb-3 text-sm md:text-base">Quick Links</h4>
+            <ul className="space-y-2 text-gray-400 text-sm">
               <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Services</a></li>
               <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
@@ -39,8 +39,8 @@ function Footer() {
 
           {/* Our Services */}
           <div>
-            <h4 className="font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="font-semibold mb-3 text-sm md:text-base">Our Services</h4>
+            <ul className="space-y-2 text-gray-400 text-sm">
               <li><a href="#" className="hover:text-white transition-colors">Career Guidance</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Relationship Analysis</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Marriage Compatibility</a></li>
@@ -50,9 +50,9 @@ function Footer() {
           </div>
 
           {/* Contact Us */}
-          <div>
-            <h4 className="font-semibold mb-4">Contact Us</h4>
-            <ul className="space-y-2 text-gray-400">
+          <div className="col-span-2 md:col-span-1">
+            <h4 className="font-semibold mb-3 text-sm md:text-base">Contact Us</h4>
+            <ul className="space-y-2 text-gray-400 text-sm">
               <li>📞 +91 98765 43210</li>
               <li>📧 contact@astroguide.com</li>
             </ul>
