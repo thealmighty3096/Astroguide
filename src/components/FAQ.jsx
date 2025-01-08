@@ -134,7 +134,7 @@ function FAQ() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-gray-400">
                   <span>📞</span>
-                  +91 98765 43210
+                  +91 9542985149
                 </li>
                 <li className="flex items-center gap-2 text-gray-400">
                   <span>✉️</span>
