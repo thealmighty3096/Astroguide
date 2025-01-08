@@ -76,10 +76,10 @@ function ConsultationForm() {
   return (
     <div 
       id="book-consultation" 
-      className="bg-white text-black scroll-mt-163"
+      className="bg-white text-black pb-0"
     >
       <Container>
-        <div className="text-center mb-0 md:mb-0 px-4 md:px-0">
+        <div className="text-center px-4 md:px-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
             Begin Your Astrological Journey
           </h2>
@@ -88,7 +88,7 @@ function ConsultationForm() {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl p-6 md:p-12">
+        <div className="max-w-3xl mx-auto bg-white rounded-xl md:rounded-2xl p-6 md:p-12 md:pb-0">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>

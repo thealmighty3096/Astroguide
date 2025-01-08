@@ -27,7 +27,7 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <section id="testimonials" className="bg-white text-black pt-0">
+    <section id="testimonials" className="bg-white text-black -mt-12">
       <Container>
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
