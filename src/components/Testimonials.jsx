@@ -6,25 +6,28 @@ const testimonials = [
     name: "Priya Sharma",
     type: "Career Guidance",
     rating: 5,
+    image: "/client7.jpg",
     comment: "The career guidance I received was incredibly accurate. Changed jobs based on the consultation and couldn't be happier with my decision."
   },
   {
     name: "Rahul Mehta",
     type: "Marriage Consultation",
     rating: 5,
+    image: "/client8.jpg",
     comment: "The marriage compatibility analysis was eye-opening. The insights helped us understand each other better and strengthen our relationship."
   },
   {
     name: "Anjali Patel",
     type: "Life Purpose Reading",
     rating: 5,
+    image: "/client9.jpg",
     comment: "The detailed birth chart analysis and life purpose reading gave me clarity about my path. Highly recommend their personalized approach!"
   }
 ]
 
 function Testimonials() {
   return (
-    <section id="testimonials" className="bg-white text-black py-12 md:py-20">
+    <section id="testimonials" className="bg-white text-black pt-0">
       <Container>
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
@@ -37,12 +40,12 @@ function Testimonials() {
 
         <div className="relative px-4 md:px-0">
           {/* Navigation Buttons */}
-          <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white">
+          <button className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 w-12 h-12 bg-purple-600 rounded-full items-center justify-center text-white">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white">
+          <button className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 w-12 h-12 bg-purple-600 rounded-full items-center justify-center text-white">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -53,10 +56,12 @@ function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 rounded-xl md:rounded-2xl p-6 md:p-8">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                    </svg>
+                  <div className="w-12 h-12 rounded-full overflow-hidden">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">{testimonial.name}</h3>

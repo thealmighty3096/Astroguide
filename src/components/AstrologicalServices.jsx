@@ -37,7 +37,7 @@ const services = [
 
 function AstrologicalServices() {
   return (
-    <section id="about" className="bg-[#1a1a1a] text-white py-12 md:py-20">
+    <section id="about" className="bg-[#1a1a1a] text-white pt-8 md:pt-12">
       <Container>
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">

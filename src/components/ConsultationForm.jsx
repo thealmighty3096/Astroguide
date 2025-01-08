@@ -76,10 +76,10 @@ function ConsultationForm() {
   return (
     <div 
       id="book-consultation" 
-      className="pt-16 md:pt-24 bg-white text-black scroll-mt-16"
+      className="bg-white text-black scroll-mt-163"
     >
       <Container>
-        <div className="text-center mb-8 md:mb-12 px-4 md:px-0">
+        <div className="text-center mb-0 md:mb-0 px-4 md:px-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
             Begin Your Astrological Journey
           </h2>

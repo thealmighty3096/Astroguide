@@ -1,75 +1,94 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from './Container'
 
 const faqs = [
   {
     question: "How does the consultation process work?",
-    answer: "After you submit your details, our team will contact you to confirm your appointment. During the consultation, our expert astrologer will analyze your birth chart and provide personalized guidance."
+    answer: "After submitting your details, you'll receive a call within 24 hours to confirm your information and discuss payment. Once completed, our expert astrologer will analyze your birth chart and schedule a detailed consultation call."
   },
   {
     question: "How accurate are the predictions?",
-    answer: "Our predictions are based on traditional Vedic astrology principles and your unique birth chart. While accuracy depends on precise birth details, our experienced astrologers provide highly reliable insights."
+    answer: "Our predictions are based on traditional Vedic astrology principles and detailed birth chart analysis. While we provide highly accurate insights, remember that free will plays a role in shaping your future."
   },
   {
     question: "What information do I need to provide?",
-    answer: "We require your full name, date of birth, time of birth (if known), and place of birth. The more accurate these details, the more precise your reading will be."
+    answer: "You'll need to provide your full name, date of birth, time of birth (if known), place of birth, and your specific areas of concern or questions."
   },
   {
     question: "How long is the consultation session?",
-    answer: "A typical consultation session lasts 45-60 minutes, allowing sufficient time for detailed analysis and addressing your specific questions and concerns."
+    answer: "Each consultation typically lasts 30 minutes, allowing enough time for detailed chart analysis and addressing your specific questions."
   }
 ]
 
 function FAQ() {
+  const [openIndex, setOpenIndex] = useState(0)
+
   return (
     <div className="bg-[#1a1a1a] text-white">
-      <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-3">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-gray-400 text-lg">
-            Everything you need to know about our astrology consultations
-          </p>
-        </div>
-
-        <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-[#2a2a2a] rounded-xl p-4 cursor-pointer hover:bg-[#2f2f2f] transition-colors"
-            >
-              <div className="flex justify-between items-center">
-                <h3 className="text-lg font-medium">{faq.question}</h3>
-                <svg
-                  className="w-5 h-5 text-purple-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Container>
-
-      {/* Footer */}
-      <footer className="mt-24 border-t border-gray-800">
+      <section id="faq" className="pt-8 md:pt-12">
         <Container>
-          <div className="grid grid-cols-4 gap-8 py-12">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-gray-400 text-base md:text-lg px-4 md:px-0">
+              Find answers to common questions about our astrological services
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4 px-4 md:px-0">
+            {faqs.map((faq, index) => (
+              <div 
+                key={index} 
+                className="bg-[#2a2a2a] rounded-lg md:rounded-xl overflow-hidden"
+              >
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
+                  className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex items-center justify-between hover:bg-[#333333] transition-colors"
+                >
+                  <span className="font-semibold text-base md:text-lg pr-4">{faq.question}</span>
+                  <svg
+                    className={`w-5 h-5 md:w-6 md:h-6 flex-shrink-0 transform transition-transform ${
+                      openIndex === index ? 'rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  className={`px-4 md:px-6 transition-all duration-200 ease-in-out ${
+                    openIndex === index ? 'py-3 md:py-4' : 'py-0 h-0'
+                  }`}
+                >
+                  <p className={`text-gray-400 leading-relaxed text-sm md:text-base ${
+                    openIndex === index ? 'opacity-100' : 'opacity-0'
+                  }`}>
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <footer className="mt-12 md:mt-24 border-t border-gray-800">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-8 md:py-12 px-4 md:px-0">
             <div>
-              <h3 className="text-xl font-bold mb-4">AstroGuide</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">AstroGuide</h3>
               <p className="text-gray-400 text-sm mb-4">
                 Personalized astrological guidance for life's important decisions.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-4 mt-4">
                 <a href="#" className="text-gray-400 hover:text-white">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -89,7 +108,7 @@ function FAQ() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white">Services</a></li>
@@ -100,7 +119,7 @@ function FAQ() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+              <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Our Services</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-400 hover:text-white">Career Guidance</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white">Relationship Analysis</a></li>
@@ -111,7 +130,7 @@ function FAQ() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+              <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Contact Us</h3>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-gray-400">
                   <span>📞</span>
@@ -125,7 +144,7 @@ function FAQ() {
             </div>
           </div>
 
-          <div className="py-6 border-t border-gray-800 text-center text-gray-400 text-sm">
+          <div className="py-4 md:py-6 border-t border-gray-800 text-center text-gray-400 text-xs md:text-sm px-4 md:px-0">
             © 2024 AstroGuide. All rights reserved.
           </div>
         </Container>

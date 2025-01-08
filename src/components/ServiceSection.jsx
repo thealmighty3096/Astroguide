@@ -31,9 +31,9 @@ const steps = [
 
 function ServiceSection() {
   return (
-    <section id="services" className="bg-white text-black">
+    <section id="services" className="bg-white text-black pt-0 md:pt-0">
       <Container>
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="text-4xl font-bold mb-3">
             How Our Service Works
           </h2>

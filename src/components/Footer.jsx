@@ -55,7 +55,7 @@ function Footer() {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li className="flex items-center gap-2">
                 <span>📞</span>
-                <span>+91 98765 43210</span>
+                <span>+91 9542985149</span>
               </li>
               <li className="flex items-center gap-2">
                 <span>📧</span>

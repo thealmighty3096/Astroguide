@@ -47,7 +47,7 @@ function Hero() {
   };
 
   return (
-    <div className="pt-16 pb-8 min-h-screen md:h-[85vh]">
+    <div className="min-h-[85vh] pt-16 pb-0">
       {/* Audio Control Button - Fixed Position */}
       <button
         onClick={toggleAudio}
@@ -66,7 +66,7 @@ function Hero() {
       </button>
 
       <Container>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 h-full">
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">
               Discover Your Path Through{' '}
@@ -82,7 +82,10 @@ function Hero() {
               >
                 Book Consultation
               </button>
-              <button className="px-5 py-2.5 border border-purple-500 rounded-lg hover:bg-purple-500/10 transition-colors">
+              <button 
+                onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+                className="px-5 py-2.5 border border-purple-500 rounded-lg hover:bg-purple-500/10 transition-colors"
+              >
                 Learn More
               </button>
             </div>
