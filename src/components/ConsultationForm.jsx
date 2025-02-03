@@ -191,6 +191,44 @@ function ConsultationForm() {
             </div>
           </form>
 
+          {/* Success Message - Enhanced visibility */}
+          <div className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 transform transition-all duration-500 ease-out ${
+            isSubmitted 
+              ? 'opacity-100 scale-100' 
+              : 'opacity-0 scale-95 pointer-events-none'
+          }`}>
+            <div className="bg-white shadow-2xl rounded-xl p-6 flex flex-col items-center gap-4">
+              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                <svg 
+                  className="w-6 h-6 text-white" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Request Submitted Successfully!
+                </h3>
+                <p className="text-gray-600">
+                  We'll contact you within 24 hours to confirm your consultation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Optional: Add overlay when success message is shown */}
+          <div className={`fixed inset-0 bg-black/50 transition-opacity duration-500 ${
+            isSubmitted ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`} />
+
           {/* Error Message */}
           <div className={`transform transition-all duration-500 ease-out ${
             error 
@@ -215,34 +253,6 @@ function ConsultationForm() {
               </div>
               <p className="text-red-600 font-medium">
                 {error}
-              </p>
-            </div>
-          </div>
-
-          {/* Success Message */}
-          <div className={`transform transition-all duration-500 ease-out ${
-            isSubmitted 
-              ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 -translate-y-4 pointer-events-none'
-          }`}>
-            <div className="flex items-center justify-center gap-2 mt-8">
-              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                <svg 
-                  className="w-4 h-4 text-white" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              </div>
-              <p className="text-green-600 font-medium">
-                Consultation request submitted successfully!
               </p>
             </div>
           </div>
